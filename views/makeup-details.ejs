@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Makeup Details</h1>
+    <p>Name: <%= makeup.name %></p>
+    <% if(makeup.isAvailable){ %>
+        <p>Available </p>
+    <% }else { %>
+       <p>Not Available</p>
+    <% } %>    
+
+    <form action="/makeup/<%= makeup._id %>/delete?_method=DELETE" method="post">
+        <button>Delete Makeup</button>
+    </form>
+    <a href="/makeup/<%= makeup._id %>/edit">Edit Makeup</a>
+
+</body>
+</html>

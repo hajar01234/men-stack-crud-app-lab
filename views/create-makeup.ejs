@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/navbar') %>
+    <h1>The My MakeUp ❣</h1>
+
+     <form action="/makeup" method="post">
+        <label for="name">Name:</label>
+        <input name="name" id="name" type="text">
+        
+         <label for="isAvailable">Is Available?</label>
+        <input name="isAvailable" id="isAvailable" type="checkbox">
+        <button>Create Makeup</button>
+    </form>
+</body>
+</html>

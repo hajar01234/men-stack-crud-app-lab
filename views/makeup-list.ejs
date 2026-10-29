@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('./partials/navbar') %>
+    <h1>All Makeup</h1>
+    <% if (makeup.length === 0 ){ %>
+        <p>No Makeup to show yet. come back later</p>
+        <a href="/makeup/new">create your owe makeup here</a>
+        <% } %>
+
+
+    <% for(let onemakeup of makeup){%>
+        <p>Name: <%= onemakeup.name %></p>
+        <a href="/makeup/<%= onemakeup._id %>">See makeup Detyails</a>
+     
+    <% } %>    
+
+</body>
+
+</html>
